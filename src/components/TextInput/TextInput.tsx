@@ -16,7 +16,7 @@ const StyledInputDictionary: Record<string, typeof PrimaryInput> = {
   const TextInput: React.FC<TextInputProps> = ({ variant, ...props }) => {
     const StyledInput = getStyledComponent({ variant });
   
-    return <StyledInput {...props} />;
+    return <StyledInput/>;
   };
   
   export default TextInput;
