@@ -7,9 +7,14 @@ on:
 
 jobs:
   release:
+    env:
+      key1: ${{secrets.GITHUB_TOKEN}}
     runs-on: ubuntu-latest
 
     steps:
+      - name: teste-secret
+        run: echo $key1
+        
       - name: Checkout code
         uses: actions/checkout@v3
 
@@ -21,7 +26,7 @@ jobs:
       - name: Install dependencies
         run: npm install
 
-      - name: Semantic Release  ${{ secrets.GITHUB_TOKEN }}
+      - name: Semantic Release  ${{secrets.GITHUB_TOKEN}}
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }} # Referência ao segredo configurado no repositório
         run: npx semantic-release
