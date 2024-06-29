@@ -24,4 +24,4 @@ jobs:
       - name: Semantic Release
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }} # Referência ao segredo configurado no repositório
-        run: npx semantic-release
+        run: npx semantic-release ${{ secrets.GITHUB_TOKEN }}
