@@ -9,11 +9,11 @@ jobs:
   release:
     env:
       key1: ${{secrets.GITHUB_TOKEN}}
+      if: $key1 != null
+      run: echo "running
     runs-on: ubuntu-latest
 
     steps:
-      - name: teste-secret
-        run: echo $key1
         
       - name: Checkout code
         uses: actions/checkout@v3
