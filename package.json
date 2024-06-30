@@ -9,6 +9,11 @@
     "prepare": "npm run build",
     "release": "semantic-release"
   },
+  "release": {
+    "branches": [
+      "master"
+    ]
+  },
   "keywords": [],
   "author": "",
   "license": "ISC",
